@@ -1,15 +1,26 @@
 package mfun;
 
-import mfun.Main;
+import mfun.Direction;
 
 public class PlayerCharacter {
 
-    private Main gameLoop;
+    // TODO: more javadoc comments
 
-    public PlayerCharacter(Main game) {
-        this.gameLoop = game;
+    private String name;
+    private Direction dir;
+
+    public PlayerCharacter() {
+        this.name = "Sammy";
+        this.dir = Direction.RIGHT;
     }
 
-    public void changeDirection(
+    public PlayerCharacter(String name) {
+        this.name = name;
+        this.dir = Direction.RIGHT;
+    }
+
+    public void changeDirection(Direction d) {
+        this.dir = d;
+    }
 
 }
