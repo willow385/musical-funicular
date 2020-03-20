@@ -2,13 +2,9 @@ apply plugin: 'java'
 apply plugin: 'application'
 mainClassName = 'mfun.Main'
 
-repositories {
-    mavenCentral()
-}
+repositories { }
 
-dependencies {
-    compile 'de.gurkenlabs:litiengine:0.4.12'
-}
+dependencies { }
 
 jar {
     baseName = 'musical-funicular'
