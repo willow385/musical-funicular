@@ -35,6 +35,10 @@ public class Window extends JPanel {
             g2d.setColor(Color.blue);
         }
 
+        if (hexTile instanceof LandTile) {
+            g2d.setColor(Color.green);
+        }
+
         g2d.drawLine(x+1, y+1, x+11, y+1);
         g2d.drawLine(x+1, y+1, x-5, y+12);
         g2d.drawLine(x+11, y+1, x+17, y+12);
@@ -42,7 +46,26 @@ public class Window extends JPanel {
         g2d.drawLine(x+1, y+23, x+11, y+23);
         g2d.drawLine(x+11, y+23, x+17, y+12);
 
+
+        if (hexTile instanceof LandTile) {
+            if (((LandTile)hexTile).hasCity()) {
+                g2d.setColor(Color.black);
+                g2d.drawLine(x, y+12, x+10, y+12);
+                g2d.drawLine(x+2, y+6, x+2, y+12);
+                g2d.drawLine(x+12, y+3, x+12, y+12);
+                g2d.drawLine(x+21, y+6, x+21, y+12);
+            } else if (((LandTile)hexTile).hasFarm()) {
+                g2d.drawLine(x, y+2, x+12, y+2);
+                g2d.drawLine(x, y+12, x+12, y+12);
+                g2d.drawLine(x, y+20, x+12, y+20);
+            }
+        }
+
         g2d.setColor(Color.black);
+    }
+
+    public HexTile[] getNeighbors(HexTile hexTile) {
+        return null;
     }
 
 }
