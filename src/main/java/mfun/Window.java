@@ -5,12 +5,14 @@ import java.awt.Graphics2D;
 import java.awt.Color;
 
 import javax.swing.JPanel;
+import java.awt.FlowLayout;
 
 public class Window extends JPanel {
 
     private HexTile[][] hexTiles;
 
     public Window(HexTile[][] hexTiles) {
+        super(new FlowLayout(FlowLayout.LEFT));
         this.hexTiles = hexTiles;
     }
 
@@ -65,6 +67,8 @@ public class Window extends JPanel {
     }
 
     public HexTile[] getNeighbors(HexTile hexTile) {
+        /* TODO write a method that returns a list of
+         * references to a given hexTile's neighbors */
         return null;
     }
 

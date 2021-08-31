@@ -25,5 +25,6 @@ public class Main {
         gameBoard.setLocationRelativeTo(null);
         gameBoard.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         gameBoard.setVisible(true);
+        gameBoard.initMainLoop();
     }
 }
